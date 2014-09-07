@@ -8,8 +8,12 @@ GET     /                               controllers.Application.index
 #Angular stuff
 GET     /angularjs/html/:name           controllers.Angular.html(name:String)
 
-GET     /angularjs/controller/:name     controllers.Angular.controller(name:String)
+#Authentication
+POST    /api/login                      controllers.Authentication.login
 
+#Services
+GET     /api/cars                       controllers.Application.cars
+GET     /api/carDetails                 controllers.Application.carDetails(id:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                   controllers.Assets.at(path="/public", file)
