@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <p class="navbar-brand">Ejemplo de página principal: seleccione un elemento para ver sus detalles</p>
+            <p class="navbar-brand">Ejemplo de página principal: seleccione un coche para ver sus detalles</p>
         </div>
 
         </ul>
@@ -21,11 +21,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="coche in coches">
-                <td ng-click="showDetails(coche)"><img src="{{coche.img}}" class="productImageThumbnail">{{coche.model}}</td>
-                <td>{{coche.brand}}</td>
-                <td>{{coche.year}}</td>
-            </tr>
+                <tr ng-click="showDetails(coche)" ng-repeat="coche in coches">
+                    <td><img src="{{coche.img}}" class="productImageThumbnail">{{coche.model}}</td>
+                    <td>{{coche.brand}}</td>
+                    <td>{{coche.year}}</td>
+                </tr>
             </tbody>
         </table>
     </div>
