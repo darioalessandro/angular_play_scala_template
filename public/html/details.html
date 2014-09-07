@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#/main">Regresar</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/">Salir</a></li>
+        </ul>
+    </div>
+</nav>
+<div role="main" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p><h2>{{coche.model}}</h2></p>
+            <p>{{coche.brand}}</p>
+            <p>{{coche.year}}</p>
+            <p>{{coche.description}}</p>
+        </div>
+        <div class=" col-md-6">
+            <img src="{{coche.img}}" class="productImage">
+        </div>
+    </div>
+</div>
