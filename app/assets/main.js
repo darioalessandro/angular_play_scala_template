@@ -31,7 +31,7 @@ app.controller("AppCtrl", ["$scope", "$location", function($scope, $location) {
 
 app.controller("LoginController", ["$scope", "$http","$timeout", function($scope, $http,$timeout) {
 	$scope.login=function(user){
-        if(typeof user.email !== "undefined" && typeof user.pass !== "undefined"){
+        if(typeof user !== "undefined"  && typeof user.email !== "undefined" && typeof  user.pass !== "undefined"){
             $http.post('/api/login',user)
             .success(function(data, status, headers, config) {
                 $scope.loginError=null;
